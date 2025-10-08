@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/feedbackImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="6dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/car" />
+
+    <TextView
+        android:id="@+id/feedbackTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/feedbackImage"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/calistoga"
+        android:text="FEEDBACK"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/feedbackEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/feedbackTitle"
+        android:layout_marginTop="20dp"
+        android:hint="Write your feedback here"
+        android:inputType="textMultiLine"
+        android:minHeight="100dp"
+        android:gravity="top|start" />
+
+    <Button
+        android:id="@+id/submitFeedbackButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/feedbackEditText"
+        android:layout_marginTop="20dp"
+        android:text="Submit Feedback" />
+
+    <LinearLayout
+        android:id="@+id/usernav_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10dp">
+
+        <!-- Second FAB -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/user_viewcars_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/black"
+            app:tint="@color/white"
+            android:src="@drawable/baseline_nav_car_24" />
+
+        <!-- Third FAB -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/user_viewbook_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/black"
+            app:tint="@color/white"
+            android:src="@drawable/baseline_nav_bookings_24" />
+
+        <!-- Fourth FAB -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/user_profile_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/black"
+            app:tint="@color/white"
+            android:src="@drawable/baseline_person_outline_24" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/user_logout_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/red"
+            app:tint="@color/white"
+            android:src="@drawable/baseline_logout_24" />
+
+    </LinearLayout>
+
+</RelativeLayout>

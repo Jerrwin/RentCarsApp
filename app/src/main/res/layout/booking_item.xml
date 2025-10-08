@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="13dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/border">
+
+    <TextView
+        android:id="@+id/bookingUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bookingDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bookingUsername" />
+
+    <TextView
+        android:id="@+id/bookingTotalKm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Total KM"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bookingDate" />
+
+    <TextView
+        android:id="@+id/bookingTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- New TextView for Phone Number -->
+    <TextView
+        android:id="@+id/bookingPhoneNo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bookingTotalKm" />
+
+    <!-- New TextView for Car Name -->
+    <TextView
+        android:id="@+id/bookingCarName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Car Name"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bookingPhoneNo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

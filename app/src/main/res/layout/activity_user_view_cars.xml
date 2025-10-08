@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".activities.UserViewCars">
+
+    <!-- Add ScrollView to make content scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Content inside the ScrollView -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/car" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calistoga"
+                android:layout_marginTop="50dp"
+                android:text="DETAILED CAR VIEW"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold" />
+
+            <!-- Car Image -->
+            <ImageView
+                android:layout_marginTop="120dp"
+                android:id="@+id/usercarImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_below="@+id/usercarImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Car Model -->
+                <TextView
+                    android:id="@+id/user_car_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Model: "
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingBottom="8dp" />
+
+                <!-- Car Type -->
+                <TextView
+                    android:id="@+id/user_car_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type: "
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingBottom="8dp" />
+
+                <!-- Seating Capacity -->
+                <TextView
+                    android:id="@+id/user_seating_capacity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seating Capacity: "
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingBottom="8dp" />
+
+                <!-- Rate per KM -->
+                <TextView
+                    android:id="@+id/user_rate_per_km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rate per KM: "
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingBottom="8dp" />
+
+                <!-- Date Picker Button -->
+                <Button
+                    android:id="@+id/select_booking_date_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="#8080ff"
+                    android:text="Click here to Pick Date"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <!-- Display selected date -->
+                <TextView
+                    android:id="@+id/selected_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selected Date: "
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="10dp" />
+
+                <!-- EditText to input kilometers -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter total KM: "
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="10dp" />
+
+                <EditText
+                    android:id="@+id/total_km_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Enter total KM"
+                    android:textColor="@color/black"
+                    android:paddingBottom="8dp" />
+
+                <!-- Display total amount -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount: "
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="10dp" />
+
+                <TextView
+                    android:id="@+id/total_amount_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="₹ 0"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingBottom="8dp" />
+
+                <!-- Book Button -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/user_book_car_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#8080ff"
+                    android:text="BOOK"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <!-- Back Button -->
+                <Button
+                    android:id="@+id/user_backButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentEnd="true" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

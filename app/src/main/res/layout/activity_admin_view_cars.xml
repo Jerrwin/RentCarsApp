@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".activities.AdminViewCars">
+
+    <!-- Add ScrollView to make content scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Content inside the ScrollView -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/car" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calistoga"
+                android:layout_marginTop="50dp"
+                android:text="DETAILED CAR VIEW"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold" />
+
+            <!-- Car Image -->
+            <ImageView
+                android:layout_marginTop="120dp"
+                android:id="@+id/carImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_below="@+id/carImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Car Model -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/car_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="13dp"
+                    android:hint="Car Model">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Car Type -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/car_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="13dp"
+                    android:hint="Car Type">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Seating Capacity -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/seating_capacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="13dp"
+                    android:hint="Seating Capacity">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Rate per KM -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/rate_per_km"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="13dp"
+                    android:hint="Rate per KM">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Availability -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Availability Status:"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical" />
+
+                    <CheckBox
+                        android:id="@+id/availability_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Available"
+                        android:layout_marginStart="16dp" />
+                </LinearLayout>
+
+                <!-- Update Button -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/update_car_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#8080ff"
+                    android:text="Update"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <!-- Back Button -->
+                <Button
+                    android:id="@+id/deleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentEnd="true" />
+
+                <!-- Back Button -->
+                <Button
+                    android:id="@+id/backButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentEnd="true" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="13dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/border">
+
+    <TextView
+        android:id="@+id/userbookingCarName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Car Name"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userseatingcapacity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Seating Capacity"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userbookingCarName" />
+
+    <TextView
+        android:id="@+id/userbookingDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userseatingcapacity" />
+
+    <TextView
+        android:id="@+id/userbookingTotalKm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Total KM"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userbookingDate" />
+
+    <TextView
+        android:id="@+id/userbookingTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userbookingTotalKm" />
+
+    <!-- Cancel Button -->
+    <Button
+        android:id="@+id/user_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel Booking"
+        android:textColor="@android:color/white"
+        android:backgroundTint="?attr/colorError"
+        app:layout_constraintTop_toBottomOf="@id/userbookingTotalAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/user_invoice_button"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <!-- Get Invoice Button -->
+    <Button
+        android:id="@+id/user_invoice_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Invoice"
+        android:textColor="@android:color/white"
+        android:backgroundTint="?attr/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/userbookingTotalAmount"
+        app:layout_constraintStart_toEndOf="@id/user_cancel_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

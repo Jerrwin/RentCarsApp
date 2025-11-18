@@ -41,7 +41,7 @@ Admins can manage cars, bookings, and feedback efficiently.
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Jerrwin/RentCarsApp.git
+git clone https://github.com/Jerrwin/Rent-Cars-App.git
 ```
 2. Open the project in Android Studio.
 3. Add your Firebase google-services.json file inside the app/ folder.
